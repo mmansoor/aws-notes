@@ -1,4 +1,4 @@
-# AWWS User Data with nginx auto install
+# AWS User Data with nginx auto install
 This [user data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) code snippet will install nginx on first boot and create a html file with "Ready" in the web root of nginx.
 
 This can also be used in launch template.
