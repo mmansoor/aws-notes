@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo yum update -y
-amazon-linux-extras install -y nginx1.12
+sudo amazon-linux-extras install -y nginx1.12
 sudo systemctl start nginx
 sudo systemctl enable nginx
 usermod -a -G nginx-user ec2-user
