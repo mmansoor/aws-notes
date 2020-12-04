@@ -9,7 +9,7 @@ chmod 2775 /var/www
 find /var/www -type d -exec chmod 2775 {} \;
 find /var/www -type f -exec chmod 0664 {} \;
 TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"` && curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/local-ipv4 > /usr/share/nginx/html/ready.html
-yum -y install ruby
+sudo yum -y install ruby
 cd /tmp
 wget https://aws-codedeploy-us-east-2.s3.amazonaws.com/latest/install;
 chmod +x ./install
