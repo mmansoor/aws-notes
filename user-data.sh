@@ -20,6 +20,10 @@ sudo yum install -y awslogs
 sudo systemctl start awslogsd
 sudo systemctl enable awslogsd.service
 sudo amazon-linux-extras install python3
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo yum -y install python-pip
-sudo pip install certbot-nginx
+#curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+#sudo yum -y install python-pip
+sudo wget -r --no-parent -A 'epel-release-*.rpm' https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/
+sudo rpm -Uvh dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-*.rpm
+sudo yum-config-manager --enable epel*
+sudo yum repolist all
+sudo yum install -y certbot python2-certbot-apache
