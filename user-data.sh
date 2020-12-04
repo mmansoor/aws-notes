@@ -20,5 +20,6 @@ sudo yum install -y awslogs
 sudo systemctl start awslogsd
 sudo systemctl enable awslogsd.service
 sudo amazon-linux-extras install python3
-sudo yum install -y python-pip python-wheel
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo yum -y install python-pip
 sudo pip install certbot-nginx
