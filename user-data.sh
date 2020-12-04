@@ -19,6 +19,6 @@ sudo systemctl enable codedeploy-agent.service
 sudo yum install -y awslogs
 sudo systemctl start awslogsd
 sudo systemctl enable awslogsd.service
-sudo yum install -y python
+sudo amazon-linux-extras install python3
 sudo yum install -y python-pip python-wheel
 sudo pip install certbot-nginx
